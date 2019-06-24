@@ -17,8 +17,8 @@ def GetURL(link):
         print "File could not be read."
 
 channel = raw_input("Enter channel name: ");
-filename = channel + ".m3u";
-search = GetURL2("https://www.google.com/search?safe=active&ei=btcQXZD5MqqIggfWmY_4Bg&q=spee.ch+sitemap+americanlampoon&oq=spee.ch+sitemap+" + channel + "&gs_l=psy-ab.3..33i160.278360.284271..284547...3.0..0.247.2087.10j8j1......0....1..gws-wiz.......0i71j33i299.l77RvJYoy9Y");
+filename = channel + ".m3u8";
+search = GetURL2("https://www.google.com/search?safe=active&ei=btcQXZD5MqqIggfWmY_4Bg&q=spee.ch+sitemap19.xml.gz+" + channel + "&oq=spee.ch+sitemap+" + channel + "&gs_l=psy-ab.3..33i160.278360.284271..284547...3.0..0.247.2087.10j8j1......0....1..gws-wiz.......0i71j33i299.l77RvJYoy9Y");
 import re;
 split1 = re.split(channel + "</b>#", search, flags=re.IGNORECASE)[1];
 split1 = re.split("&", split1, flags=re.IGNORECASE)[0];
@@ -51,7 +51,7 @@ while i <= L:
 file = codecs.open(filename, 'w', 'utf-8')
 file.write(filestring);
 file.close()
-print 'To quote my mentor Thanos, "the work is done."';
+raw_input('To quote my mentor Thanos, "the work is done."\nPress enter to exit.');
 #print "Parsing file...";
 #url = page.split("https://p-events-delivery.akamaized.net/")[1].split("/");
 #print url;
